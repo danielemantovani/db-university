@@ -16,7 +16,8 @@ WHERE `date_of_birth` <= DATE_SUB(CURRENT_DATE(),INTERVAL 30 YEAR);
 -- 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT * 
 FROM `courses` 
-WHERE `year` = 1 AND `period` = "I semestre";
+WHERE `year` = 1 
+AND `period` = "I semestre";
 
 -- 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 20/06/2020 (21)
 SELECT * 
@@ -44,7 +45,8 @@ VALUES ("75", "Daniele", "Manto", "1991-04-03", "AEGAYZ78P14C763V", "2023-05-12"
 -- 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 UPDATE `teachers`
 SET `office_number` = 126
-WHERE `name` = "Pietro" AND `surname` = "Rizzo";
+WHERE `name` = "Pietro" 
+AND `surname` = "Rizzo";
 -- 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
 DELETE FROM `students`
 WHERE `id` = 5001;
